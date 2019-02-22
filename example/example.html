@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calendarjs Example</title>
+    <link rel="stylesheet" href="../font-awesome.css">
+    <style>
+    * {margin:0; padding:0;}
+    button {border:0; background-color:transparent;}
+
+    .calendar {position:relative; width:308px; margin:100px 100px 0; box-shadow:0px 10px 25px rgba(0, 0, 0, 0.35);}
+
+    .calendar-header {width:308px; height:50px; position:relative; text-align:center;}
+    .calendar-header .date {height:50px; padding-top:9px; font-size:20px; box-sizing:border-box; text-align:center;}
+    .calendar-header .button {display:block; position:absolute; top:50%; margin-top:-20px; width:40px; height:40px; border-radius:40px; cursor:pointer; color:#000;}
+    .calendar-header .button-prev {left:0;}
+    .calendar-header .button-next {right:0;}
+
+    .calendar-table {border-collapse:collapse;}
+    .calendar-table th {width:44px; height:40px; text-align:center; box-sizing:border-box; font-weight:normal; font-size:12px; background-color:#fbfbfb; border-top:1px solid #f4f4f4; border-bottom:1px solid #f4f4f4;}
+    .calendar-table td {width:36px; height:40px; text-align:center; font-size:12px;}
+    .calendar-table td button {display:inline-block; width:36px; height:36px; border-radius:44px; cursor:pointer; font-family:'Ubuntu';}
+    .calendar-table td button:hover {background-color:#e0e0e0;}
+    .calendar-table td button.sunday {color:#ff0000}
+    .calendar-table td button.today {background-color:#39f; color:#fff; box-shadow:0px 4px 12px rgba(0, 0, 0, 0.2);}
+    
+    </style>
+</head>
+<body>
+    <div class="calendar"></div>
+    <script src="../moment.js"></script>
+    <script src="../calendar.js"></script>
+    <script>
+    ;(function() {
+
+        var calendar = new Calendar(document.querySelector('.calendar'), {
+            clickAfter : function(data) {
+                console.log(data);
+            }
+        });
+
+    })();
+    </script>
+</body>
+</html>
